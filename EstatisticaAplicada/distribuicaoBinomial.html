@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Distribuição Binomial</title>
+
+	<!--SCRIPTS-->
+	<script src="js/distribuicaoBinomial.js"></script>	
+	<script src="js/bibliotecas/jquery.js"></script>
+	<script src="js/bibliotecas/bootstrap.js"></script>
+	<!--SCRIPTS-->
+
+	<!--CSS-->
+	<link rel="stylesheet" href="css/bibliotecas/bootstrap.css">
+ 	<link rel="stylesheet" href="css/estilo.css">
+ 	<link rel="stylesheet" href="css/bibliotecas/animate.min.css">	
+ 	<!--CSS-->
+
+</head>
+<body class="bg-light-blue animated fadeIn" onload="limpar();">
+
+	<!--BARRA DE NAVEGAÇÃO-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+
+		<div class="container">
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>		
+
+				<a class="navbar-brand">Estatística Aplicada</a>		
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="">Sobre</a></li>
+				</ul>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+	<!--BARRA DE NAVEGAÇÃO-->
+
+	<!--TOPO-->
+	<div class="jumbotron text-center">
+
+		<h1>Distribuição Binomial</h1>
+
+	</div>
+	<!--TOPO-->
+
+	<!--MEIO-->
+	<div class="container-fluid container-paginas">
+
+		<div class="col-sm-4 pull-right">
+
+			<img src="img/logo.png" alt="logo" class="img-responsive" style="width: 100%;">
+			
+		</div>
+
+		<!--LISTA 1-->
+		<div id="lista1" class="col-sm-6">
+
+			<p><strong>Calculos:</strong></p>
+
+			<div class="radio">
+				<label for="a" class="radio">
+					<input onchange="divInputX();" id="a" type="radio" name="radioButtonHipotese"></input>Exatamente X
+				</label>				
+			</div>
+
+			<div class="radio">
+				<label for="b" class="radio">
+					<input onchange="divInputX();" id="b" type="radio" name="radioButtonHipotese"></input>No maximo X
+				</label>				
+			</div>
+
+			<div class="radio">
+				<label for="c" class="radio">
+					<input onchange="divInputX();" id="c" type="radio" name="radioButtonHipotese"></input>No minimo X
+				</label>				
+			</div>
+
+			<div class="radio">
+				<label for="d" class="radio">
+					<input onchange="divInputX();" id="d" type="radio" name="radioButtonHipotese"></input>MTC e MD
+				</label>				
+			</div>
+
+			<label for="n">Elementos(n):</label>
+			<input id="n" type="text" class="form-control"></input>
+
+			<label for="p">Objeto de Pesquisa(p):</label>
+			<input id="p" type="text" class="form-control"></input>
+
+			<label for="q">Resto do Objeto(q):</label>
+			<input id="q" type="text" class="form-control"></input>
+
+			<div id="divInputX">
+				<label for="x">Numero X:</label>
+				<input id="x" type="text" class="form-control"></input>
+			</div>
+
+
+			<!--GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+			<br />			
+
+			<a class="btn btn-primary" onclick="concluir();">Proximo</a>
+
+			<!--FIM DO GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+		</div>
+		<!--LISTA 1-->
+
+		<!--LISTA 2-->
+		<div id="lista2" class="col-sm-6 animated bounceIn" style="display: none;">
+
+			<p><strong>Resultado:</strong></p>
+
+			<div id="resultado">
+			</div>
+
+			<!--GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+			<br />			
+
+			<a class="btn btn-primary" href="javascript:history.go();" onclick="limpar();">Concluir</a>
+
+			<!--FIM DO GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+		</div>
+
+	</div>
+
+</body>
+</html>

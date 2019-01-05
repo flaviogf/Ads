@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Séries Estatísticas</title>
+
+	<!--SCRIPTS-->
+ 	<script src="js/seriesEstatisticas.js"></script> <!--FUNÇÕES-->
+	<script src="js/bibliotecas/jquery.js"></script>
+	<script src="js/bibliotecas/bootstrap.js"></script>
+	<!--SCRIPTS-->
+
+	<!--CSS-->
+	<link rel="stylesheet" href="css/bibliotecas/bootstrap.css">
+ 	<link rel="stylesheet" href="css/estilo.css">
+ 	<link rel="stylesheet" href="css/bibliotecas/animate.min.css">	
+ 	<!--CSS-->
+
+</head>
+<body class="bg-light-blue animated fadeIn" onload="limpar();">
+
+	<!--BARRA DE NAVEGAÇÃO-->
+	<nav class="navbar navbar-default navbar-fixed-top">
+
+		<div class="container">
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>		
+
+				<a class="navbar-brand">Estatística Aplicada</a>		
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+
+				<ul class="nav navbar-nav">
+					<li onclick="chamarIndex();"><a href="index.html">Inicio</a></li>
+					<li><a href="">Sobre</a></li>
+				</ul>
+
+			</div>
+			
+		</div>
+		
+	</nav>
+	<!--BARRA DE NAVEGAÇÃO-->
+
+	<!--TOPO-->
+	<div class="jumbotron text-center">	
+
+		<h1>Séries Estatísticas</h1>
+
+	</div>
+	<!--TOPO-->
+
+	<!--MEIO-->
+	<div class="container-fluid container-paginas">
+
+		<div class="col-sm-4 pull-right">
+
+			<img src="img/logo.png" alt="logo" class="img-responsive" style="width: 100%;">
+			
+		</div>
+
+		<!--LISTA 1 -->
+		<div id="lista1" class="col-sm-6">
+
+			<p><strong>Tipo de Pesquisa:</strong></p>
+
+			<div class="radio">
+
+				<label for="a" class="radio">				
+					<input id="a" type="radio" name="tipoPesquisa" checked></input>	Amostra
+				</label>
+
+			</div>
+
+			<div class="radio">
+
+				<label for="p" class="radio">				
+					<input id="p" type="radio" name="tipoPesquisa"></input>	População
+				</label>
+
+			</div>
+
+			<label for="nEntrevistados">Numero de Entrevistados: </label>
+			<input type="text" id="nEntrevistados" class="form-control"></input>
+
+			<label for="variavel">Variavel Pesquisada: </label>
+			<input type="text" id="variavel" class="form-control"></input>
+
+			<!--GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+			<br />			
+
+			<a class="btn btn-primary" onclick="controleNumeroInputs();">Proximo</a>
+
+			<!--FIM DO GRUPO DE BOTOES NA PARTE INFERIOR-->
+						
+		</div>
+		<!--FIM DA LISTA 1-->
+
+		<!--INICIO DA LISTA 2-->
+		<div id="lista2" style="display: none;" class="col-sm-6 animated bounceIn">
+
+			<p><strong>Dados dos Entrevistados:</strong></p>
+
+			<div id="divInputsEntrevistados" style="display: none;">
+
+				<input type="text" name="vetorH"></input>
+							
+			</div>
+
+			<!--GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+			<br />
+
+			<a class="btn btn-primary" href="javascript:history.go();" onclick="limpar();">Voltar</a>
+
+			<a class="btn btn-primary" onclick="orgDados();">Proximo</a>
+
+			<!--FIM DO GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+		</div>
+		<!--FIM DA LISTA 2-->
+
+		<!--INICIO DA LISTA 3-->
+		<div id="lista3" style="display: none;" class="col-sm-6 animated bounceIn">
+
+			<p><strong>Dados dos Entrevistados:</strong></p>
+
+			<div id="resultado">
+
+			</div>
+
+			<!--GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+			<br />
+
+			<a class="btn btn-primary" href="javascript:history.go();" onclick="limpar();">Voltar</a>
+
+			<a class="btn btn-primary" onclick="controleLista3();">Proximo</a>
+
+			<!--FIM DO GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+		</div>
+		<!--FIM DA LISTA 3-->
+
+		<!--INICIO DA LISTA 4-->
+		<div id="lista4" style="display: none;" class="col-sm-6 animated bounceIn">
+
+			<p><strong>Resultado:</strong></p>
+
+			<div id="tabelaHtml" class="table-responsive"></div>
+
+			<div id="medidas"></div>
+
+			<!--GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+			<br />
+
+			<a class="btn btn-primary" href="javascript:history.go();" onclick="limpar();">Concluir</a>
+
+			<!--FIM DO GRUPO DE BOTOES NA PARTE INFERIOR-->
+
+		</div>
+		<!--FIM DA LISTA 4-->
+
+	</div>
+	<!--MEIO-->
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "name": "agi-bi-frontend",
+  "version": "1.0.0",
+  "description": "trabalho agi",
+  "main": "index.jsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flaviogf/agi-bi-frontend.git"
+  },
+  "author": "Flavio Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flaviogf/agi-bi-frontend/issues"
+  },
+  "homepage": "https://github.com/flaviogf/agi-bi-frontend#readme",
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.27.3",
+    "file-loader": "^0.10.1",
+    "font-awesome": "^4.7.0",
+    "history": "^4.6.1",
+    "lite-server": "^2.3.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router-dom": "^4.0.0",
+    "style-loader": "^0.16.0",
+    "webpack": "^2.3.1"
+  },
+  "scripts": {
+    "start": "webpack",
+    "lite": "lite-server -c ./bs-config.json"
+  }
+}

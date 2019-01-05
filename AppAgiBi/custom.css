@@ -1,0 +1,25 @@
+.table-hover td {
+    cursor: pointer;
+}
+
+.navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-inverse {
+    border-color: #222;
+}
+
+.table > thead > tr > th {
+    background-color: #222;
+    color: white;
+    border-bottom: 0;
+}
+
+.center-block {
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
